@@ -1,20 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 :root{
     --bgdcolor: #fff;
-
+    --color:#838383;
 }
 *{
-    color : #000;
+    color : var(--color);
     padding : 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
 }
 
 
 body{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     flex-direction: column;
     background-color: #EBEAEA;
 } 
@@ -22,7 +23,6 @@ body{
 /*----------------------------------------------------------------------*/
 /*font*/
  h1{
-    font-family: 'Open Sans', sans-serif;
     font-size: 3em;
     color :#D14444;
     font-weight: 700;
@@ -30,21 +30,22 @@ body{
 }
 
 h2{
-    font-family: 'Open Sans', sans-serif;
     font-size: 2em;
-    color: #000;
+    color: var(--color);
     font-weight: 500; 
-    padding: 1%;
+    padding: 2%;
+    margin: 1%;
 }
 
 
 p{
-    font-family: 'Open Sans', sans-serif;
     font-size: 1em;
-    color: #000;
+    color: var(--color);
     font-weight: 500; 
     padding: 1%;
+    margin: 5%;
     text-align: justify;
+    font-size: 1.2em;
 }
 
  
@@ -58,7 +59,7 @@ strong,
 
 
 header{
-    width: 40%;
+    width: 50%;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -70,6 +71,7 @@ header{
 .img1{
     border-radius: 50%;
     margin: 1%;
+    width: 30%;
 }
 
 .bouton{
@@ -95,4 +97,151 @@ header{
     transition: 1.5rem;
 }
 
+img{
+    width: 10rem;
+}
+/*--------------------------------------------------------------------------*/
+/*sections*/
 
+main{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+section{
+    background-color: var( --bgdcolor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 5%;
+    margin: 1%;
+}
+
+.lien{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+}
+
+ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+}
+
+li{
+    list-style-type: none;
+    width: 25%;
+    width: 100%;
+}
+
+.l{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 50%;
+
+}
+a {
+    text-decoration: none;
+}
+a p{
+    font-size: 3rem; 
+    padding: 2%;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.l:hover{
+    scale: 1.5;
+}
+
+/*entourer d'une balise p la balise i => on ne peux pas selectionner la balise i  : le seul moyen d'agrandir les icones en script est d'utiliser la balise p*/
+
+/*---------------------------------------------------*/
+
+/*section film*/
+
+.movie{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    padding: 2%;
+}
+
+article{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 2%;
+}
+
+div{
+    display: flex;
+    align-items: center;
+    flex-direction: column;    
+    height: 100%;
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+@media screen and (max-width:1100px){
+    /*body{
+        display: none;
+    }*/
+
+    h1{
+        font-size: 2.5rem;
+    }
+    h2{
+        font-size: 2rem;
+    }
+    h3{
+        font-size: 1.5rem;
+    }
+    p{
+        font-size: 0.8rem;
+    }
+
+    header, main{
+        width: 60%;
+    }
+}
+
+/*-----------------------------------------------------------------------------------------------------------*/
+
+@media screen and (max-width:600px){
+    /*body{
+        display: none;
+    }*/
+
+    h1{
+        font-size: 2rem;
+    }
+    h2{
+        font-size: 1.5rem;
+    }
+    h3{
+        font-size: 1rem;
+    }
+    p{
+        font-size: 0.6rem;
+    }
+
+    header, main{
+        width: 100%;
+    }
+    img{
+        width: 50%;
+    }
+}
