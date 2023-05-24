@@ -9,6 +9,10 @@
 
 ## commit 2 : 
 
- - End of the HTML. 
+ - End of HTML. 
  - Create a styles.css file. 
  - work on css (header)
+## commit 3:
+
+- End of CSS
+- responsive
